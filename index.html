@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Anime Quiz Thingy">
+    <meta name="twitter:description" content="Anime Quiz Thingy">
+    <title>Anime Quiz Thingy</title>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <link rel="stylesheet" href="./css/animate.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+  </head>
+
+  <body>
+    <div id='loadingOverlay'>
+      <div class='loader'></div>
+      <div class='loaderText'>
+        <h2>loading ...</h2>
+        <h3></h3>
+      </div>
+    </div>
+    <div id="settingsPopup" class="overlay">
+      <div class="popup">
+        <h1>Settings</h1>
+        <a class="close">&times;</a>
+        <div class="content">
+          <h2>Time Between Rounds (in ms)</h2>
+          <div class="sliderInput" id="settingsInputRoundTime">
+            <input type="range" min="0" max="10000" step="100" />
+            <input type="number" min="0" max="10000" step="100"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div>
+        <a class="close">&times;</a>
+        <h2>About</h2>
+        <p>This is an Anime Quiz Game Thingy I made.</p>
+        <p>In it you are shown a random show and three random directors and you're supposed to guess who the director of the show is.</p>
+        <p>You either type in your AniList-Account name or the number of the most popular shows you would like to be part of the selection of shows.</p>
+        <p>Then you'll get to select how many of em to use, so if you want it all to be really random, add a lot of entries in the first menu and then make the final selection small.</p>
+        <p>I recommend playing this on your smartphone btw.</p>
+        <p>Have fun.</p>
+      </div>
+    </div>
+  </body>
+</html>

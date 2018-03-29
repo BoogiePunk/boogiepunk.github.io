@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* General Stuff */
+body, html {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 5px 0px;
+}
+
+h2 {
+  margin: 0px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #02a9ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 100%;
+  margin: 5px 0px;
+  cursor: pointer;
+  border: 1px solid #029aff;
+  transition: all 0.2s;
+  max-width: 300px;
+}
+
+button:hover {
+  background: #ffffff;
+  color: #029aff;
+}
+
+button.inverted {
+  background: #ffffff;
+  color: #029aff;
+  border-color: #ffffff;
+}
+
+button.inverted:hover {
+  background: #02a9ff;
+  color: #ffffff;
+}
+
+input {
+  width: calc(100% - 110px);
+  border: 1px solid #029aff;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 5px 0px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+input + button {
+  width: 100px;
+  display: inline-block;
+}
+
+
+input[type=range] {
+  height: 37px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  border: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #02a9ff;
+  border-radius: 5px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #02a9ff;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #02a9ff;
+  border-radius: 5px;
+}
+input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+}
+input[type=range]::-ms-fill-lower {
+  background: #02a9ff;
+  border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #02a9ff;
+  border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #02a9ff;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #02a9ff;
+}
+
+/* Specific Stuff */
+
+.screen {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.section {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 700px;
+}
+
+/* Round Screen */
+
+.topBar {
+  padding: 10px 30px;
+  background: #029aff;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: left;
+  height: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.topBar .rightCounter {
+  float: right;
+}
+
+.topBar .rightCounter span:nth-child(1) {
+  color: #00ff00;
+}
+.topBar .rightCounter span:nth-child(2) {
+  color: #ff0000;
+}
+
+.topBar .rightCounter span:nth-child(3) a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.topBar .loadingSlider {
+  height: 5px;
+  width: 0%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: #ffffff;
+}
+
+.roundSection {
+  display: flex;
+  flex-flow: column;
+  height: calc(100% - 50px);
+}
+
+.roundSection::before {
+  content: '-directed by-';
+  height: 50%;
+  width: 100%;
+  position: fixed;
+  top:50%;
+  left:0;
+  font-weight: bold;
+  background: #029aff;
+  transition: top 0.1s;
+  color: #ffffff;
+  line-height: 0px;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  transition: background 0.5s;
+}
+
+.roundSection.wrong::before {
+  background: #ff0000;
+}
+
+.roundSection.right::before {
+  background: #00ff00;
+}
+
+
+.topRow {
+  margin: auto 10px;
+}
+
+.bottomRow {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.bottomRow .imageContainer {
+  cursor: pointer;
+}
+
+.imageContainer {
+  width: 30%;
+  max-width: 20vh;
+  height: auto;
+  position: relative;
+  margin: auto;
+  transition: bottom 0.1s;
+  bottom: 0px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.imageContainer h3 {
+  color: #ffffff;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  margin: 0px;
+  font-size: 3vh;
+}
+
+.topRow .imageContainer img {
+  border: 3px solid #029aff;
+}
+
+.bottomRow .imageContainer img {
+  border: 3px solid #ffffff;
+}
+
+.topRow .imageContainer h3 {
+  margin: 0px -100% 40px;
+}
+
+.bottomRow .imageContainer.wrong img {
+  border-color: #ff0000;
+}
+.bottomRow .imageContainer.wrong h3 {
+  color: #ff0000;
+}
+
+.bottomRow .imageContainer.right img {
+  border-color: #00ff00;
+}
+.bottomRow .imageContainer.right h3 {
+  color: #00ff00;
+}
+
+/* Popup */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0, 0.7);
+  transition: opacity 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+
+.popup {
+  background: #ffffff;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #029aff;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+/* About */
+#about {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0, 0.7);
+  display: flex;
+  z-index: 20;
+  overflow-y: auto;
+}
+
+#about > div {
+  background: #ffffff;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+#about p {
+  margin: 10px 0px;
+}
+
+/* Title Section */
+
+.homeScreen {
+  overflow: visible;
+}
+
+.homeScreen > .section:nth-child(n+4):not(#creditSection) {
+  padding-bottom: 57px;
+}
+
+
+
+#titleSection {
+  color: #ffffff;
+  background: #02a9ff;
+  padding: 10px;
+  max-width: 100%;
+}
+
+#creditSection {
+  color: #ffffff;
+  background: #02a9ff;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#creditSection a {
+  color: #ffffff;
+}
+
+#creditSection > span {
+  display: block;
+  font-size: 15px;
+}
+
+#creditSection > span:nth-child(2) {
+  font-size: 12px;
+}
+
+
+#roundInput {
+  margin: 10px auto;
+  padding-bottom: 50px;
+}
+
+.sliderInput input[type='range'] {
+  width: calc(100% - 110px);
+  padding: 0px;
+  margin: 0px;
+  padding-top: 20px;
+}
+.sliderInput input[type='number'] {
+  width: 100px;
+  margin: 0px;
+}
+
+
+/*Game Over Section*/
+.gameoverScreen {
+  height: auto;
+  min-height: 100%;
+  overflow: visible;
+}
+
+.gameoverSection {
+  min-height: 100vh;
+  background: #029aff;
+  color: #ffffff;
+}
+
+.gameoverSection h3 {
+  margin: 0px;
+}
+
+.pieChart {
+  width: 60vw;
+  height: 60vw;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 10px auto;
+  background: linear-gradient(to right, #0f0 50%, #f00 0);
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+
+.pieChart > div {
+  width: 50%;
+  height: 100%;
+  margin-left: 50%;
+  border-radius: 0 100% 100% 0 / 50%;
+  transform-origin: left;
+}
+
+
+/* Loading Thingy */
+
+#loadingOverlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: #02a9ff;
+  z-index: 10;
+  display: flex;
+  flex-flow: column;
+}
+
+#loadingOverlay .loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s cubic-bezier(0.40, 0.15, 0.55, 0.90) infinite;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#loadingOverlay .loaderText {
+  margin: auto;
+  margin-top: 0px;
+  text-align: center;
+}
+
+#loadingOverlay h2, h3 {
+  color: #ffffff;
+  margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

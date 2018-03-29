@@ -1,0 +1,30 @@
+<div class="screen homeScreen">
+  <div class="section slideInDown animated" id="titleSection">
+    <h1>Anime Quiz Thingy</h1>
+  </div>
+  <div class="section fadeInRight animated" id="usernameInput">
+    <h2>Use Completed Shows</h2>
+    <input type="text" placeholder="Username"/>
+    <button>Submit</button>
+  </div>
+  <div class="section fadeInRight animated" id="popularInput">
+    <h2>Use Most Popular Shows</h2>
+    <input type="number" min="10" max="1000" step="1" placeholder="Num of Shows"/>
+    <button>Submit</button>
+  </div>
+  <div class="section fadeInRight animated" id="settingsButton">
+    <button class="settingsTrigger">Settings</button>
+  </div>
+  <div class="section fadeInRight animated" id="roundInput" style="display:none">
+    <h2>Amount Of Rounds</h2>
+    <div class="sliderInput">
+      <input type="range" min="10" max="1000" step="1" value="10" />
+      <input type="number" min="10" max="1000" step="1" value="10" />
+    </div>
+    <button>Submit</button>
+  </div>
+  <div class="section" id="creditSection">
+      <span>Made by <a href="https://twitter.com/BooooooogiePunk" target="_blank">BoogiePunk</a></span>
+      <span>(powered by <a href="https://anilist.gitbooks.io/anilist-apiv2-docs/" target="_blank">AniList API v2</a>)</span>
+  </div>
+</div>
